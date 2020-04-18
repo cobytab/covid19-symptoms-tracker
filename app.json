@@ -1,0 +1,17 @@
+{
+  "name": "covid19SymptomTracker",
+  "displayName": "covid19SymptomTracker",
+  "expo": {
+    "name": "covid19SymptomTracker",
+    "slug": "covid19SymptomTracker",
+    "version": "1.0.0",
+    "platforms": [
+      "ios",
+      "android",
+      "web"
+    ],
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}
