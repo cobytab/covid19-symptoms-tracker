@@ -1,6 +1,6 @@
 {
-  "name": "covid19SymptomTracker",
-  "displayName": "covid19SymptomTracker",
+  "name": "Covid-19 Symptom Tracker",
+  "displayName": "Covid-19 Symptom Tracker",
   "expo": {
     "name": "covid19SymptomTracker",
     "slug": "covid19SymptomTracker",

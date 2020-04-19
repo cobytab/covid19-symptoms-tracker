@@ -30,6 +30,7 @@ const Root = () => {
             fontWeight: "bold",
           },
         }}
+        initialRouteName="Home"
       >
         <Stack.Screen
           options={{ headerShown: false }}
@@ -38,7 +39,11 @@ const Root = () => {
         />
         <Stack.Screen name="Login" component={Login} />
         <Stack.Screen name="SymptomReport" component={SymptomReport} />
-        <Stack.Screen name="Thanks" component={Thanks} />
+        <Stack.Screen
+          options={{ headerShown: false }}
+          name="Thanks"
+          component={Thanks}
+        />
       </Stack.Navigator>
     </NavigationContainer>
   );
