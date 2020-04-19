@@ -31,14 +31,18 @@ const Root = () => {
             fontWeight: "600",
           },
         }}
-        initialRouteName="Home"
+        initialRouteName="Login"
       >
+        <Stack.Screen
+          options={{ headerShown: false }}
+          name="Login"
+          component={Login}
+        />
         <Stack.Screen
           options={{ headerShown: false }}
           name="Home"
           component={Home}
         />
-        <Stack.Screen name="Login" component={Login} />
         <Stack.Screen
           name="SymptomReport"
           component={SymptomReport}

@@ -105,3 +105,17 @@ export const symptoms = StyleSheet.create({
     backgroundColor: colors.dark,
   },
 });
+
+export const login = StyleSheet.create({
+  input: {
+    color: colors.golden,
+    borderWidth: 1.5,
+    elevation: 1,
+    borderColor: colors.light,
+    borderRadius: 25,
+    padding: 10,
+    paddingHorizontal: 25,
+    marginTop: 20,
+    letterSpacing: 1,
+  },
+});

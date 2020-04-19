@@ -100,10 +100,13 @@ const SymptomReport = ({ navigation, route }) => {
         {data.map((item, id) => {
           if (id === index) {
             return (
-              <View style={[symptoms.indicator, symptoms.indicatorActive]} />
+              <View
+                key={id}
+                style={[symptoms.indicator, symptoms.indicatorActive]}
+              />
             );
           }
-          return <View style={[symptoms.indicator]} />;
+          return <View key={id} style={[symptoms.indicator]} />;
         })}
       </View>
     </View>
