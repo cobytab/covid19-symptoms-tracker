@@ -37,9 +37,14 @@ const SymptomReport = ({ navigation, route }) => {
     },
   ];
   const currentData = data[index];
-  const [currentOption, setCurrentOption] = useState();
+  const [currentOption, setCurrentOption] = useState(null);
 
   const Indicator = <></>;
+
+  const handlePress = (optionIndex) => {
+    setCurrentOption(optionIndex);
+    setTimeout(() => navigation.navigate("Home"), 600)
+  };
 
   return (
     <View style={{ flex: 1 }}>
@@ -58,10 +63,21 @@ const SymptomReport = ({ navigation, route }) => {
 
             <View style={home.buttonView}>
               {currentData.options.map((option, index) => {
+                if (index === currentOption) {
+                  return (
+                    <TouchableOpacity
+                      key={index}
+                      onPress={() => handlePress(index)}
+                      style={[home.button, home.firstbtn]}
+                    >
+                      <Text style={home.buttonText}>{option}</Text>
+                    </TouchableOpacity>
+                  );
+                }
                 return (
                   <TouchableOpacity
                     key={index}
-                    onPress={() => alert("Send a Daily Update")}
+                    onPress={() => handlePress(index)}
                     style={home.button}
                   >
                     <Text style={[home.buttonText, symptoms.regularbtnText]}>
