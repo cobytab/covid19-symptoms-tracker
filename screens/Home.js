@@ -6,7 +6,7 @@ import { View, Text, TouchableOpacity } from "react-native";
 // Custom sytles
 import { basic, home } from "../shared/styles";
 
-const Home = ({navigation}) => {
+const Home = ({ navigation }) => {
   return (
     <View style={[basic.container, home.view]}>
       <Text style={home.head}>COVID</Text>
@@ -16,22 +16,28 @@ const Home = ({navigation}) => {
       </View>
 
       <View style={home.mainInfo}>
-          <Text style={home.mainInfoText}>Self report daily.</Text>
-          <Text style={home.mainInfoText}>Slow the outbreak.</Text>
-          <Text style={home.mainInfoText}>Identify risk.</Text>
+        <Text style={home.mainInfoText}>Self report daily.</Text>
+        <Text style={home.mainInfoText}>Slow the outbreak.</Text>
+        <Text style={home.mainInfoText}>Identify risk.</Text>
       </View>
 
       <View style={home.subInfo}>
-          <Text style={home.subInfoText}>Thank you for contributing</Text>
+        <Text style={home.subInfoText}>Thank you for contributing</Text>
       </View>
 
       <View style={home.buttonView}>
-          <TouchableOpacity style={[home.button, home.firstbtn]} onPress={() => navigation.navigate("SymptomReport", {index: 0})}>
-              <Text style={home.buttonText}>Report Symptoms</Text>
-          </TouchableOpacity>
-          <TouchableOpacity onPress={() => alert("Send a Daily Update")} style={home.button}>
-              <Text style={home.buttonText}>Send a Daily Update</Text>
-          </TouchableOpacity>
+        <TouchableOpacity
+          style={[home.button, home.firstbtn]}
+          onPress={() => navigation.navigate("SymptomReport")}
+        >
+          <Text style={home.buttonText}>Report Symptoms</Text>
+        </TouchableOpacity>
+        <TouchableOpacity
+          onPress={() => alert("Send a Daily Update")}
+          style={home.button}
+        >
+          <Text style={home.buttonText}>Send a Daily Update</Text>
+        </TouchableOpacity>
       </View>
     </View>
   );

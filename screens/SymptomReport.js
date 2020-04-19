@@ -8,6 +8,7 @@ import { basic, home, symptoms } from "../shared/styles";
 
 const SymptomReport = ({ navigation, route }) => {
   const { index } = route.params;
+  // Array of question data
   const data = [
     {
       title: "COVID-19 Test",
@@ -37,13 +38,18 @@ const SymptomReport = ({ navigation, route }) => {
     },
   ];
   const currentData = data[index];
+
+  // Selected option
   const [currentOption, setCurrentOption] = useState(null);
-
-  const Indicator = <></>;
-
   const handlePress = (optionIndex) => {
     setCurrentOption(optionIndex);
-    setTimeout(() => navigation.navigate("Home"), 600)
+    let link;
+    if (index === data.length - 1) {
+      link = "Thanks";
+    } else {
+      link = `SymptomReport${index + 1}`;
+    }
+    setTimeout(() => navigation.navigate(link), 600);
   };
 
   return (

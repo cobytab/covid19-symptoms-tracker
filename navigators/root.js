@@ -24,6 +24,7 @@ const Root = () => {
             backgroundColor: colors.light,
             elevation: 0,
           },
+          headerTitle: "Report Symptoms",
           headerTintColor: colors.dark,
           headerTitleAlign: "center",
           headerTitleStyle: {
@@ -39,9 +40,29 @@ const Root = () => {
         />
         <Stack.Screen name="Login" component={Login} />
         <Stack.Screen
-          options={{ headerTitle: "Report Symptoms" }}
           name="SymptomReport"
           component={SymptomReport}
+          initialParams={{ index: 0 }}
+        />
+        <Stack.Screen
+          name="SymptomReport1"
+          component={SymptomReport}
+          initialParams={{ index: 1 }}
+        />
+        <Stack.Screen
+          name="SymptomReport2"
+          component={SymptomReport}
+          initialParams={{ index: 2 }}
+        />
+        <Stack.Screen
+          name="SymptomReport3"
+          component={SymptomReport}
+          initialParams={{ index: 3 }}
+        />
+        <Stack.Screen
+          name="SymptomReport4"
+          component={SymptomReport}
+          initialParams={{ index: 4 }}
         />
         <Stack.Screen
           options={{ headerShown: false }}
