@@ -77,9 +77,10 @@ const SymptomReport = ({ navigation, route }) => {
       <View style={symptoms.indicatorView}>
         {data.map((item, id) => {
           if (id === index) {
-            return <View style={[symptoms.indicator, symptoms.indicatorActive]} />;
+            return (
+              <View style={[symptoms.indicator, symptoms.indicatorActive]} />
+            );
           }
-
           return <View style={[symptoms.indicator]} />;
         })}
       </View>
