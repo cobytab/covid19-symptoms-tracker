@@ -78,3 +78,30 @@ export const home = StyleSheet.create({
         padding: 30
     }
 })
+
+export const symptoms = StyleSheet.create({
+    view: {
+        backgroundColor: colors.light
+    },
+    headText: {
+        color: colors.dark
+    },
+    regularbtnText: {
+        color: colors.dark
+    },
+    indicatorView: {
+        flexDirection: 'row',
+        backgroundColor: colors.light,
+        padding: 40,
+        paddingVertical: 20
+    },
+    indicator: {
+        backgroundColor: colors.grayish,
+        height: 5,
+        minWidth: '15%',
+        margin: 5
+    },
+    indicatorActive: {
+        backgroundColor: colors.dark,
+    }
+})

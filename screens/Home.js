@@ -6,7 +6,7 @@ import { View, Text, TouchableOpacity } from "react-native";
 // Custom sytles
 import { basic, home } from "../shared/styles";
 
-const Home = () => {
+const Home = ({navigation}) => {
   return (
     <View style={[basic.container, home.view]}>
       <Text style={home.head}>COVID</Text>
@@ -26,7 +26,7 @@ const Home = () => {
       </View>
 
       <View style={home.buttonView}>
-          <TouchableOpacity style={[home.button, home.firstbtn]} onPress={() => alert("Pressed")}>
+          <TouchableOpacity style={[home.button, home.firstbtn]} onPress={() => navigation.navigate("SymptomReport", {index: 0})}>
               <Text style={home.buttonText}>Report Symptoms</Text>
           </TouchableOpacity>
           <TouchableOpacity onPress={() => alert("Send a Daily Update")} style={home.button}>

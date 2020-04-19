@@ -27,7 +27,7 @@ const Root = () => {
           headerTintColor: colors.dark,
           headerTitleAlign: "center",
           headerTitleStyle: {
-            fontWeight: "bold",
+            fontWeight: "600",
           },
         }}
         initialRouteName="Home"
@@ -38,7 +38,7 @@ const Root = () => {
           component={Home}
         />
         <Stack.Screen name="Login" component={Login} />
-        <Stack.Screen name="SymptomReport" component={SymptomReport} />
+        <Stack.Screen options={{headerTitle: 'Report Symptoms'}} name="SymptomReport" component={SymptomReport} />
         <Stack.Screen
           options={{ headerShown: false }}
           name="Thanks"
